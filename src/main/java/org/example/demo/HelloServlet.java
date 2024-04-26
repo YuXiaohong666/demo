@@ -23,6 +23,8 @@ public class HelloServlet extends HttpServlet {
             FileItemFactory fileItemFactory = new DiskFileItemFactory();
 //            创建用于解析上传数据的工具类ServletFileUpload
             ServletFileUpload servletFileUpload = new ServletFileUpload(fileItemFactory);
+//            将request的编码转为utf-8，防止上传的中文文件名乱码
+            req.setCharacterEncoding("utf-8");
 //            调用用解析方法
             try {
                 List<FileItem> list = servletFileUpload.parseRequest(req);
