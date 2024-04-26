@@ -9,5 +9,10 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
+<form method="post" action="hello-servlet" enctype="multipart/form-data">
+    <input type="text" name="name">
+    <input type="file" name="file">
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>
